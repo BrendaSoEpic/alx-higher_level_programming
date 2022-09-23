@@ -5,20 +5,20 @@ if __name__ == "__main__":
 
     num_args = len(sys.argv)
     if num_args != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <m> <operator> <n>")
         exit(1)
-    a = int(sys.argv[1])
+    m = int(sys.argv[1])
     op = sys.argv[2]
-    b = int(sys.argv[3])
+    n = int(sys.argv[3])
 
     if op is '+':
-        print("{} {} {} = {}".format(a, op, b, add(a, b)))
+        print("{} {} {} = {}".format(m, op, n, add(m, n)))
     elif op is '-':
-        print("{} {} {} = {}".format(a, op, b, sub(a, b)))
+        print("{} {} {} = {}".format(m, op, n, sub(m, n)))
     elif op is '*':
-        print("{} {} {} = {}".format(a, op, b, mul(a, b)))
+        print("{} {} {} = {}".format(m, op, n, mul(m, n)))
     elif op is '/':
-        print("{} {} {} = {}".format(a, op, b, div(a, b)))
+        print("{} {} {} = {}".format(m, op, n, div(m, n)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)

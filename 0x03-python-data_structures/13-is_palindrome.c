@@ -33,7 +33,6 @@ int is_palindrome(listint_t **head)
 		}
 		secondHalf = slowP;
 		slowP_prev->next = NULL;
-
 		reverse(&secondHalf);
 
 		retval = compareLists(*head, secondHalf);

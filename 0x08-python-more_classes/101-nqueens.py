@@ -56,7 +56,7 @@ def xout(board, row, col):
     c = col + 1
     for r in range(row + 1, len(board)):
         if c >= len(board):
-            break        
+            break
         board[r][c] = "x"
         c += 1
     # X out all spots diagonally up to the left

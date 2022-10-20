@@ -106,7 +106,7 @@ A combo example:
     Fortasse id optimum, sed ubi illud:
     <BLANKLINE>
     Plus semper voluptatis?
-    <BLANt must be a stringKLINE>
+    <BLANKLINE>
     Teneo, inquit, finem illi videri nihil dolere.
     <BLANKLINE>
     Transfer idem ad modestiam vel temperantiam, 

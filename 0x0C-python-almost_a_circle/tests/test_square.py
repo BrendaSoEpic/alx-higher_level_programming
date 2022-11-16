@@ -124,7 +124,7 @@ class TestSquare_size(unittest.TestCase):
             Square((1, 2, 3), 2, 3)
 
     def test_frozenset_size(self):
-        with self.assertRaisesRegex(TypeError,"width must be an integer"):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(frozenset({1, 2, 3, 1}))
 
     def test_range_size(self):
@@ -487,10 +487,10 @@ class TestSquare_update_args(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s.update(89, "invalid")
 
-    def test_update_args_size_zero(self):
+    def test_update_arg_size_zero(self):
         s = Square(10, 10, 10, 10)
-      with self.assertRaisesRegex(ValueError, "width must be > 0"):
-           s.update(89, 0)
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            s.update(89, 0)
 
     def test_update_args_size_negative(self):
         s = Square(10, 10, 10, 10)
@@ -514,7 +514,7 @@ class TestSquare_update_args(unittest.TestCase):
 
     def test_update_args_y_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaiesy must be >= 0"):sRegex(ValueError, " must be >= 0"):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(98, 1, 2, -4)
 
     def test_update_args_size_before_x(self):

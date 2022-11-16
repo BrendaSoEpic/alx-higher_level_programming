@@ -223,9 +223,9 @@ class TestRectangle_height(unittest.TestCase):
             Rectangle(1, (1, 2, 3))
 
     def test_frozenset_height(self):
-        with self.asseaisesRegex(TypeError,  "height must be an integer"):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
             Rectangle(1, frozenset({1, 2, 3, 1}))
- 
+
     def test_range_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
             Rectangle(1, range(5))
@@ -248,7 +248,7 @@ class TestRectangle_height(unittest.TestCase):
 
     def test_nan_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(1,  float('nan'))
+            Rectangle(1, float('nan'))
 
     def test_negative_height(self):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
@@ -658,14 +658,14 @@ class TestRectangle_update_args(unittest.TestCase):
             r.update(89, "invalid", 1, 2, "invalid")
 
     def test_update_args_height_before_x(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(.update(width=2, id=1)10, 10, 10, 10, 10)
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
             r.update(89, 1, "invalid", "invalid")
 
     def test_update_args_height_before_y(self):
         r = Rectangle(10, 10, 10, 10, 10)
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            r.update(89, 1, "invalid", 1, "invalid)
+            r.update(89, 1, "invalid", 1, "invalid")
 
     def test_update_args_x_before_y(self):
         r = Rectangle(10, 10, 10, 10, 10)

@@ -122,9 +122,9 @@ class TestBase_to_json_string(unittest.TestCase):
 
     def test_to_json_string_square_type(self):
         s = Square(10, 2, 3, 4)
-        self.assertEqual(str, type(Base.to_json_string([s.to_dictionary()])))
+        self.assertEqual(str, to_file(unittest.TestCase):ype(Base.to_json_string([s.to_dictionary()])))
 
-    def test_to_test_to_json_string_more_than_one_arg(self):
+    def test_to_json_string_square_one_dict(self):
         s = Square(10, 2, 3, 4)
         self.assertTrue(len(Base.to_json_string([s.to_dictionary()])) == 39)
 
@@ -145,7 +145,7 @@ class TestBase_to_json_string(unittest.TestCase):
             Base.to_json_string()
 
     def test_to_json_string_more_than_one_arg(self):
-        with self.assertRaises(TypeError):
+       with self.assertRaises(TypeError):
             Base.to_json_string([], 1)
 
 
@@ -442,7 +442,7 @@ class TestBase_save_to_file_csv(unittest.TestCase):
         s2 = Square(8, 1, 2, 3)
         Square.save_to_file_csv([s1, s2])
         with open("Square.csv", "r") as f:
-          self.assertTrue("8,10,7,2\n3,8,1,2", f.read())
+            self.assertTrue("8,10,7,2\n3,8,1,2", f.read())
 
     def test_save_to_file__csv_cls_name(self):
         s = Square(10, 7, 2, 8)
@@ -466,7 +466,7 @@ class TestBase_save_to_file_csv(unittest.TestCase):
     def test_save_to_file_csv_empty_list(self):
         Square.save_to_file_csv([])
         with open("Square.csv", "r") as f:
-        self.assertEqual("[]", f.read())
+            self.assertEqual("[]", f.read())
 
     def test_save_to_file_csv_no_args(self):
         with self.assertRaises(TypeError):
@@ -543,4 +543,4 @@ class TestBase_load_from_file_csv(unittest.TestCase):
             Base.load_from_file_csv([], 1)
 
 if __name__ == "__main__":
-    unittest.main()  
+    unittest.main()
